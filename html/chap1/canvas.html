@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+    // This function will be called once the page loads completely
+    function pageLoaded(){
+      var canvas = document.getElementById("testcanvas");
+      var context = canvas.getContext("2d");
+      // our drawing goes here...
+      // Filled rectangle -> draw a rectangle that is filled x: 200, y: 10 width: 100 pixel  , height: 100 pixel;
+      context.fillRect(200, 10, 100, 100);
+      // Strocked rectangle -> draw a lined rectangle with a width and hei
+    }
+  </script>
+</head>
+<body onload="pageLoaded()">
+<canvas width="640" height="480" id="testcanvas" style="border: 1px solid black;">
+  Your browser does not support HTML5 Canvas. Please shift to a newer browser.
+</canvas>
+</body>
+</html>
