@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ComplexedShape</title>
+  <script>
+      function pageLoaded() {
+          const canvas = document.getElementById("canvas");
+          const context = canvas.getContext("2d");
+          drawFillTriangle(context);
+          drawStrokedTriangle(context);
+          drawStrokedComplexeShape(context);
+          drawArcAndCercle(context);
+          drawThreeQuarterArc(context);
+
+
+      }
+
+      function drawFillTriangle(context) {
+          // Drawing a triangle;
+          // Start recording a new path
+          context.beginPath();
+          // Move the drawing point to x and y
+          context.moveTo(10, 120); // Start drawing at 10, 20
+          // Draw a line to the current point to x , y
+          context.lineTo(10, 180);
+          context.lineTo(110, 150);
+          // close the path and fill it out
+          context.fill();
+      }
+
+      function drawStrokedTriangle(context) {
+          context.beginPath();
+          context.moveTo(140, 160);
+          context.lineTo(140, 220);
+          context.lineTo(40, 190);
+          // close the path by drawing the line between the starting point to the end point
+          context.closePath();
+          context.stroke();
+      }
+
+      function drawStrokedComplexeShape(context) {
+          // Draw a more complex set of lines
+          context.beginPath();
+          context.moveTo(160, 160); // Start drawing at 160, 160
+          context.lineTo(170, 220);
+          context.lineTo(240, 210);
+          context.lineTo(260, 170);
+          context.lineTo(190, 140);
+          context.closePath();
+          context.stroke();
+      }
+
+      function drawArcAndCercle(context) {
+          // DRAWING ARCS & CIRCLES
+          // Draw a semicircle
+          context.beginPath();
+          // Draw an arc at (400, 50) with radius 40 from 0 to 180 degrees, anticlockwise
+          // PI radians = 180 degrees
+          context.arc(100, 300, 40, 0, Math.PI, true);
+          context.stroke();
+          // Draw a full circle
+          context.beginPath();
+          // Draw an arc at (500, 50) with radius 30 from 0 to 360 degrees, anticlockwise
+          // 2*PI radians = 360 degrees
+          context.arc(100, 300, 30, 0, 2 * Math.PI, true);
+          context.fill();
+      }
+
+      function drawThreeQuarterArc(context) {
+          // Draw a three-quarter arc
+          context.beginPath();
+          // Draw an arc at (400, 100) with radius 25 from 0 to 270 degrees, clockwise
+          // (3/2*PI radians = 270 degrees)
+          context.arc(200, 300, 25, 0, 3 / 2 * Math.PI, false);
+          context.stroke();
+      }
+  </script>
+</head>
+<body onload="pageLoaded()">
+<canvas id="canvas" width="640" height="480" style="border: 1px solid black;">
+
+</canvas>
+</body>
+</html>

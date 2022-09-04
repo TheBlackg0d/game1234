@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drawing Style</title>
+  <script>
+      function onload() {
+          const canvas = document.getElementById("canvas");
+          const context = canvas.getContext("2d");
+          // FILL STYLES AND COLORS
+          // Set fill color to red
+          context.fillStyle = "red";
+          // Draw a red filled rectangle
+          context.fillRect(310, 160, 100, 50);
+          // Set stroke color to green
+          context.strokeStyle = "green";
+          // Draw a green stroked rectangle
+          context.strokeRect(310, 240, 100, 50);
+          // Set fill color to yellow using rgb()
+          context.fillStyle = "rgb(255, 255, 0)";
+          // Draw a yellow filled rectangle
+          context.fillRect(420, 160, 100, 50);
+          // Set fill color to green with an alpha of 0.6
+          context.fillStyle = "rgba(0, 255, 0, 0.6)";
+          // Draw a semi-transparent green filled rectangle
+          context.fillRect(450, 180, 100, 50);
+          // TEXTURES
+          // Get a handle to the Image object
+          const fireImage = document.getElementById("fire");
+          const pattern = context.createPattern(fireImage, "repeat");
+          // Set fill style to newly created pattern
+          context.fillStyle = pattern;
+          // Draw a pattern filled rectangle
+          context.fillRect(420, 240, 130, 50);
+      }
+  </script>
+</head>
+<body onload="onload()">
+<canvas id="canvas" width="640" height="480" style="border: 1px solid black;">
+</canvas>
+<img src="Images/fire.png" id="fire">
+</body>
+</html>

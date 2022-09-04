@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DrawImage</title>
+
+  <script>
+      function onload() {
+          const canvas = document.getElementById("canvas");
+          const context = canvas.getContext("2d");
+          // DRAWING IMAGES
+          // Get a handle to the Image object
+          let image = document.getElementById("spaceship");
+          // Draw the image at (0, 350)
+          context.drawImage(image, 0, 350);
+           // Scale the image to half the original size
+          context.drawImage(image, 0, 400, 100, 25);
+          // Draw part of the image
+          context.drawImage(image, 0, 0, 60, 50, 0, 420, 60, 50);
+      }
+  </script>
+</head>
+<body onload="onload()">
+<canvas id="canvas" width="640" height="480" style="border: 1px solid black;">
+</canvas>
+<img src="Images/fire.png" id="fire">
+<img src="Images/spaceship.png" id="spaceship">
+</body>
+</html>

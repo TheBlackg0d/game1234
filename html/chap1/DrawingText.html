@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DrawingText</title>
+  <script>
+      function onload() {
+          var canvas = document.getElementById("canvas");
+          var context = canvas.getContext("2d");
+          // DRAWING TEXT
+          context.fillText("This is some text...", 150, 40);
+          // Modify the font
+          context.font = "10pt Arial";
+          context.fillText("This is in 10pt Arial...", 150, 60);
+          // Draw stroked text
+          context.font = "16pt Arial";
+          context.strokeText("This is stroked in 16pt Arial...", 150, 80);
+
+      }
+  </script>
+</head>
+<body onload="onload()">
+<canvas id="canvas" width="640" height="480" style="border: 1px solid black;">
+
+</canvas>
+</body>
+</html>

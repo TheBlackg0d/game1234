@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transformation And Rotation</title>
+  <script>
+      function onload() {
+          const canvas = document.getElementById("canvas");
+          const context = canvas.getContext("2d");
+          let image = document.getElementById("spaceship");
+          // ROTATION AND TRANSLATION
+          // Translate origin to location of object
+          context.translate(250, 370);
+          //Rotate about the new origin by 60 degrees
+          context.rotate(Math.PI / 3);
+          context.drawImage(image, 0, 0, 60, 50, -30, -25, 60, 50);
+
+          //Restore to original state by rotating and translating back
+          context.rotate(-Math.PI / 3);
+          context.translate(-240, -370);
+
+          //Translate origin to location of object
+          context.translate(300, 370);
+          //Rotate about the new origin
+          context.rotate(3 * Math.PI / 4);
+          context.drawImage(image, 0, 0, 60, 50, -30, -25, 60, 50);
+          //Restore to original state by rotating and translating back
+          context.rotate(-3 * Math.PI / 4);
+          context.translate(-300, -370);
+      }
+  </script>
+</head>
+<body onload="onload()">
+<canvas id="canvas" width="640" height="480" style="border: 1px solid black;"></canvas>
+<img src="Images/spaceship.png" id="spaceship">
+</body>
+</html>

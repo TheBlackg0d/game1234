@@ -1,0 +1,86 @@
+body {
+    background: #000900;
+    /* Prevent the ugly blue highlighting when user select a text
+     */
+    user-select: none;
+}
+
+#wrapper {
+    position: absolute;
+}
+
+#gameContainer {
+    width: 640px;
+    height: 480px;
+    background-image: url("../images/splashscreen.png");
+}
+
+.gameLayer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+/* Game starting menu Screen */
+#gameStartScreen {
+    padding-top: 250px;
+    text-align: center;
+}
+
+#gameStartScreen img {
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+/* Level Selection screen */
+
+#levelSelectScreen {
+    padding-top: 150px;
+    padding-left: 50px;
+}
+
+#levelSelectScreen input {
+    margin: 20px;
+    cursor: pointer;
+
+    background: url("../images/icons/level.png") no-repeat;
+    color: yellow;
+    font-size: 20px;
+    width: 64px;
+    height: 64px;
+    border: 0;
+    outline: 0;/* Remove the default blue border when a input is selected */
+}
+
+/* Loading screen  */
+
+#loadingScreen {
+    background: rgba(100, 100, 100, 0.5);
+}
+
+#loadingMessage {
+    margin-top: 400px;
+    text-align: center;
+    height: 48px;
+    color: white;
+    background: url("../images/loader.gif") no-repeat center;
+    font: 12px Arial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
